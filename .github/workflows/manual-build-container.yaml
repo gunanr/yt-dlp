@@ -1,7 +1,7 @@
 ---
 name: 'Manual Build'
-  on: 
-    workflow_dispatch:
+on: 
+  workflow_dispatch:
 jobs:
   yt-dlp:
     name: yt-dlp interactive image build
