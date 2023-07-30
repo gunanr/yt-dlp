@@ -6,7 +6,7 @@ jobs:
   yt-dlp:
     name: yt-dlp interactive image build
     runs-on: ubuntu-latest
-    step:
+    steps:
       # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
