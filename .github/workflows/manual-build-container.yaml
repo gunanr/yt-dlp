@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   archlinux:
-    name: yt-dlp:archlinux container
+    name: archlinux
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,11 +20,11 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfiles/yt-dlp
+          file: Dockerfiles/archlinux
           tags: ghcr.io/gunanr/yt-dlp:archlinux
           push: true
   debian12:
-    name: yt-dlp:debian12 container
+    name: debian12
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -40,6 +40,6 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfiles/yt-dlp
+          file: Dockerfiles/debian12
           tags: ghcr.io/gunanr/yt-dlp:debian12
           push: true
