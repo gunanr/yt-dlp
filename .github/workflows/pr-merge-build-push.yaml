@@ -1,7 +1,12 @@
 ---
-name: 'Manual Build'
-on: 
+name: 'Pull Request Merge: Build Push Containers'
+
+on:
+  push:
+    branches:
+      - "main"
   workflow_dispatch:
+
 jobs:
   archlinux:
     name: archlinux
@@ -21,8 +26,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           file: Dockerfiles/archlinux
-          tags: ghcr.io/gunanr/yt-dlp:archlinux
+          tags: ghcr.io/${{ github.repository }}:archlinux
           push: true
+
   debian12:
     name: debian12
     runs-on: ubuntu-latest
@@ -41,5 +47,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           file: Dockerfiles/debian12
-          tags: ghcr.io/gunanr/yt-dlp:debian12
+          tags: ghcr.io/${{ github.repository }}:debian12
           push: true
