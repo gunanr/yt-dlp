@@ -2,6 +2,9 @@
 
 FROM docker.io/fedora:39 
 
+LABEL org.opencontainers.image.source="https://github.com/gunanr/yt-dlp"
+LABEL org.opencontainers.image.description="Interactive YouTube DLP container image"
+
 RUN dnf update -y && \
     dnf install -y \
       yt-dlp \
