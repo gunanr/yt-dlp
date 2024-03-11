@@ -1,15 +1,15 @@
 # vim: filetype=dockerfile
 
-FROM docker.io/debian:bookworm 
+FROM docker.io/fedora:39 
 
 LABEL org.opencontainers.image.source="https://github.com/gunanr/yt-dlp"
 LABEL org.opencontainers.image.description="Interactive YouTube DLP container image"
 
-RUN apt-get update -y && \
-    apt-get install -y \
+RUN dnf update -y && \
+    dnf install -y \
       yt-dlp \
       ffmpeg \
       tmux \
       vim && \
-    apt-get clean all
+    dnf clean all
 

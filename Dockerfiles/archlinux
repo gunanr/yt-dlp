@@ -1,6 +1,15 @@
-FROM archlinux:latest
+# vim: filetype=dockerfile
 
-RUN pacman -Syu --noconfirm \
+FROM docker.io/archlinux:latest
+
+LABEL org.opencontainers.image.source="https://github.com/gunanr/yt-dlp"
+LABEL org.opencontainers.image.description="Interactive YouTube DLP container image"
+
+RUN pacman-key --init && \
+    pacman-key --populate && \
+    pacman -Sy --noconfirm \
+      archlinux-keyring && \
+    pacman -Syu --noconfirm \
       yt-dlp \
       ffmpeg \
       tmux \
