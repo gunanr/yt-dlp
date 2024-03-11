@@ -1,3 +1,5 @@
+# vim: filetype=dockerfile
+
 FROM debian:bookworm 
 #FROM debian:12
 
@@ -8,3 +10,4 @@ RUN apt-get update -y && \
       tmux \
       vim && \
     apt-get clean all
+

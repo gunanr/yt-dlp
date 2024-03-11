@@ -1,3 +1,5 @@
+# vim: filetype=dockerfile
+
 FROM archlinux:latest
 
 RUN pacman-key --init && \
