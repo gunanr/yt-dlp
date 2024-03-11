@@ -1,7 +1,6 @@
 # vim: filetype=dockerfile
 
-FROM debian:bookworm 
-#FROM debian:12
+FROM docker.io/debian:bookworm 
 
 RUN apt-get update -y && \
     apt-get install -y \

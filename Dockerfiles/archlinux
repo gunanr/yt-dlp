@@ -1,6 +1,6 @@
 # vim: filetype=dockerfile
 
-FROM archlinux:latest
+FROM docker.io/archlinux:latest
 
 RUN pacman-key --init && \
     pacman-key --populate && \

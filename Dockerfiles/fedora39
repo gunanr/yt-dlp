@@ -1,6 +1,6 @@
 # vim: filetype=dockerfile
 
-FROM fedora:39 
+FROM docker.io/fedora:39 
 
 RUN dnf update -y && \
     dnf install -y \
