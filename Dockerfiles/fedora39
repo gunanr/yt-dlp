@@ -1,0 +1,12 @@
+# vim: filetype=dockerfile
+
+FROM fedora:39 
+
+RUN dnf update -y && \
+    dnf install -y \
+      yt-dlp \
+      ffmpeg \
+      tmux \
+      vim && \
+    dnf clean all
+
