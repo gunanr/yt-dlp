@@ -8,6 +8,9 @@
   <!-- Large bold red play triangle -->
   <polygon points="44,48 44,80 84,64" fill="#FF0000"/>
   
-  <!-- Bold white text -->
+  <!-- Bold white "YouTube" text above the play button -->
+  <text x="64" y="24" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">YouTube</text>
+  
+  <!-- Bold white "Download" text below -->
   <text x="64" y="115" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">Download</text>
 </svg>
