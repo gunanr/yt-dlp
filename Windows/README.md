@@ -9,7 +9,9 @@
    ```
 ### Installing the Program
 1. Copy all files to the host `C:\Tools\` directory
-1. Create a new shortcut on the User's Desktop that points to `C:\Tools\Download-YouTube-Video.bat`
+1. Pick one option to create a link on the User's Desktop:
+  1. Copy the `.lnk` file to the User's Desktop
+  1. Create a new shortcut on the User's Desktop that points to `C:\Tools\Download-YouTube-Video.bat`
 1. Set the shortcut to use the provided ico file for asthetics
 
 ## Execution
