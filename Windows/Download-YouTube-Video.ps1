@@ -26,7 +26,15 @@ Write-Host "Downloading the best available quality to $targetDir ..."
 # Download best video + best audio (merges with ffmpeg if needed)
 yt-dlp -f "bestvideo[vcodec^=avc1]+bestaudio[acodec^=mp4a]/best" $url
 
-Write-Host "Download complete!"
+# Success message with emojis (colorful!)
+Write-Host ""
+Write-Host "✅ Download completed successfully! 🎉" -ForegroundColor Green
+Write-Host "📁 Opening download folder..." -ForegroundColor Cyan
+
+# Open the current folder in Windows Explorer
 Invoke-Item $targetDir
-Pause
+
+# Wait 15 seconds, then close the PowerShell window
+Write-Host "🕒 This window will close in 15 seconds..." -ForegroundColor Yellow
+Start-Sleep -Seconds 15
 
