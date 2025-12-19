@@ -24,8 +24,9 @@ $url = Read-Host "Enter the video URL"
 Write-Host "Downloading the best available quality to $targetDir ..."
 
 # Download best video + best audio (merges with ffmpeg if needed)
-yt-dlp -f "bestvideo*+bestaudio/best" $url
+yt-dlp -f "bestvideo[vcodec^=avc1]+bestaudio[acodec^=mp4a]/best" $url
 
 Write-Host "Download complete!"
+Invoke-Item $targetDir
 Pause
 
