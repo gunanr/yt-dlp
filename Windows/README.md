@@ -11,6 +11,6 @@
 1. Set the shortcut to use the provided ico file for asthetics
 
 ## Execution
-1. Double click the `YouTube-Downloader` link on the Windows Desktop
-1. Paste the required video url
-1. Download should run and then open the downloads directory on completion
+1. Double click the `YouTube-Downloader` link on the Windows Desktop.
+1. Paste the URL of the YouTube video you wish to download into the Terminal window.
+1. Download should run in the terminal and then open the downloads directory on completion. 
